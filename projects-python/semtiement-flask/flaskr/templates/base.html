@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='webicon.png') }}">
+
+    <title>Sentiment Analysis</title>
+</head>
+
+    <a style="padding: 0 0.5rem;" href="mailto:mayank8451@gmail.com">
+      <img src="{{url_for('static', filename='email.png')}}"></a>
+    <a style="padding:0 0.5rem" href="https://github.com/cmy113/sentiment-analysis-project" target="_blank">
+      <img src="{{ url_for('static', filename='github.png')}}" ></a>
+      <a style="padding:0 0.5rem" href="https://www.linkedin.com/in/chenming-yong/" target="_blank"><img
+        src="{{ url_for('static', filename='linkedin.png') }}"></a>
+
+</header>
+
+<body>
+    <div class="content">
+        <div class="row">
+            <div class="column">
+                <img src="{{ url_for('static', filename='postive.gif')}}" class="image">
+            </div>
+            <div class="column">
+                <h1>Sentiment Analysis</h1>
+                <h2>Positive or Negative</h2>
+            </div>
+            <div class="column">
+                <img src="{{url_for('static', filename='negative.gif')}}" class="image">
+            </div>
+        </div>
+        <hr>
+        <h3>Input your message to get its sentiment</h3>
+
+        <form method="post">
+            <table width="100%">
+                <tr>
+                    <td width="85%"><input type="text" name="message" id="message"></td>
+                    <td width="15%">
+                        <button>SUBMIT</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <br>
+        <br>
+        {% block content %}
+        {% endblock %}
+        <br>
+        <br>
+    </div>
+    <footer>
+        <hr>
+        <p style="font-size:0.75em">Credits</p>
+        <ol>
+            <li style="font-size:0.5em">
+                GIFs made by <a href="https://www.qoobee.com" target="_blank">QooBee</a> from <a
+                    href="https://www.qoobee.com" target="_blank">www.qoobee.com</a>
+            </li>
+            <li style="font-size:0.5em">
+                Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" target="_blank">Pixel perfect</a>
+                from <a
+                    href="https://www.flaticon.com/" target="_blank">www.flaticon.com</a>
+            </li>
+        </ol>
+    </footer>
+    
+</body>
+</html>
